@@ -1,0 +1,24 @@
+import {Component, OnInit} from '@angular/core';
+import {SearchResult} from '../youtube/search-result';
+
+@Component({
+  // tslint:disable-next-line:component-selector
+  selector: 'youtube-search',
+  templateUrl: './youtube-search.component.html',
+  styleUrls: ['./youtube-search.component.css']
+})
+export class YoutubeSearchComponent implements OnInit {
+
+  results: SearchResult[];
+  loading: boolean;
+
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
+
+  updateReasults(results: SearchResult[]): void {
+    this.results = results;
+  }
+}
