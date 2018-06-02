@@ -26,7 +26,7 @@ export class YoutubeService {
       .map((response: Response) => {
         return (<any>response.json()).items.map(item => {
           return new SearchResult({
-            id: item.id.videId,
+            id: item.id.videoId,
             title: item.snippet.title,
             description: item.snippet.description,
             thumbnailUrl: item.snippet.thumbnails.high.url
